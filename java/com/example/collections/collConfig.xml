@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       
+       <bean class="com.example.collections.employee" name="employee1">
+       <property name="name"> 
+       <value>Ziyaulhaq Khan</value>
+       </property>
+       <property name="phones">
+       <list>
+       <value>7060544392</value>
+       <value>9536209312</value>
+       <value>7906022530</value>
+       <null/>
+       </list>
+       </property>
+       <property name="addresses">
+       <set>
+       <value>Aligarh</value>
+       <value>Delhi</value>
+       <value>Chandigarh</value>
+       </set>
+       </property>
+       <property name="courses">
+       <map>
+       <entry key="java" value="2month"/>
+       <entry key="python" value="1.5month"/>
+       <entry key="Spring" value="3month"/>
+       </map>
+       </property>
+       <property name="prop"> 
+       <props>
+       <prop key="name">Faiz</prop>
+       <prop key="channel-name">Business Techz</prop>
+       </props>
+       </property>
+       </bean>
+       
+       
+       </beans>

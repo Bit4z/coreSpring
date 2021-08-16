@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+
+<!-- <bean/> definitions here -->
+
+
+       
+       <util:list list-class="java.util.linkedList" id="myList" >
+       <value>Ziyaulhaq khan</value>
+       <value>Shvang Gupta</value>
+       <value>Sharad Yadav</value>
+       <value>Updesh Yadav</value>
+       </util:list>
+       
+       
+       <util:map map-class="java.util.HashMap" id="myHashMap">
+       <entry key="Djang-framwork" value="5000"/>
+        <entry key="spring framwork" value="8000"/>
+         <entry key="Hibernate framwork" value="2000"/>
+       </util:map>
+       
+<util:properties id="myProperty">
+<prop key="driver">com.mysql.jdbc</prop>
+<prop key="username">Faiz_Khan</prop>
+<prop key="password">12345</prop>
+</util:properties>
+
+
+<bean class="com.standAloneCollections.Person" name="person1">
+<property name="friends">
+<!--  <list>
+<value>Ziyaulhaq khan</value>
+<value>Shvang Gupta</value>
+<value>Sharad Yadav</value>
+<value>Updesh Yadav</value>
+</list>
+-->
+
+<ref bean="myList"/>
+</property>
+<property name="feeStructure" ref="myHashMap" />
+<property name="property" ref="myProperty" />
+</bean>
+</beans>
